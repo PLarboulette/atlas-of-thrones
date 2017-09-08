@@ -1,0 +1,4 @@
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-08T08:20:03.463Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-08T08:48:23.327Z"}
+{"method":"GET","status":200,"url":"/kingdoms","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-08T08:48:29.444Z"}
+{"method":"GET","status":200,"url":"/locations/castle","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-08T08:50:40.946Z"}

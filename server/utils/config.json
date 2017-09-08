@@ -1,0 +1,33 @@
+
+{
+  "DB" : {
+    "HOST" : "localhost",
+    "PORT" : 5432,
+    "NAME" : "atlas_of_thrones",
+    "USER" : "postgres",
+    "PASSWORD" : "root"
+  },
+  "APP" : {
+    "PORT" : 5000,
+    "SECRET" : "Little pink unicorn"
+  },
+  "CORS" : {
+    "URL" : "localhost:8080"
+  },
+  "REDIS" : {
+    "HOST" : "localhost",
+    "PORT" : 6379
+  },
+  "LOGGER" : {
+    "INFO" : {
+      "NAME" : "info-file",
+      "LEVEL" : "info",
+      "FILENAME" : "info.log"
+    },
+    "ERROR" : {
+      "NAME" :"error-file",
+      "LEVEL" : "error",
+      "FILENAME" : "error.log"
+    }
+  }
+}
