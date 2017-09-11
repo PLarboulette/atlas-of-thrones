@@ -20,6 +20,7 @@
     "express-cors": "0.0.3",
     "express-json": "^1.0.0",
     "express-session": "^1.13.0",
+    "joi": "^10.6.0",
     "pg": "^7.3.0",
     "serve-favicon": "^2.3.0",
     "uuid": "^2.0.2",

@@ -5,6 +5,7 @@
 const router = require('express').Router();
 const logger = require('./../utils/logger');
 const database = require('./../database/database');
+const Joi = require('joi');
 
 router.use(  async (req, res, next) => {
     try {
@@ -66,5 +67,49 @@ router.get('/kingdoms', async (req, res) => {
 
     res.send(boundaries)
 });
+
+router.get('/kingdoms/:id/size', async (req, res) => {
+    const id = req.params.id;
+    const result = await database.getRegionSize(id);
+    if (!result) {
+        res.sendStatus(404)
+    }
+
+    // Convert response (in square meters) to square kilometers
+    const sqKm = result.size * (10 ** -6);
+    res.send(sqKm)
+});
+
+router.get('/kingdoms/:id/castles', async (req, res) => {
+
+    const schema = Joi.object().keys({
+        id: Joi.number().min(0).max(1000).required(),
+    });
+
+    const regionId = req.params.id;
+
+    Joi.validate({ id: regionId}, schema, async (err, value) => {
+            if (!err) {
+                const result = await database.countCastles(regionId);
+                if (result && result.count) {
+                    res.send(result.count);
+                } else {
+                    res.sendStatus(404);
+                }
+            } else {
+                res.send(err);
+            }
+        }
+    );
+
+});
+
+
+
+
+
+
+
+
 
 module.exports = router;
