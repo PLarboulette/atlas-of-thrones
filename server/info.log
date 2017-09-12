@@ -20,3 +20,82 @@
 {"method":"GET","status":404,"url":"/kingdoms/abcccc/castles","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-08T14:50:32.344Z"}
 {"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-08T14:50:36.527Z"}
 {"method":"GET","status":200,"url":"/kingdoms/abcccc/castles","responseTime":"9 ms","level":"info","message":"","timestamp":"2017-09-08T14:50:38.164Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:36:27.212Z"}
+{"method":"GET","status":200,"url":"/kingdoms/:id/castles","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-11T12:37:22.596Z"}
+{"method":"GET","status":304,"url":"/kingdoms/:id/castles","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:37:49.438Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/castles","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:37:56.062Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:38:31.902Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:38:39.686Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:38:39.783Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:39:04.417Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:39:08.850Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:39:31.504Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:39:33.316Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:40:16.805Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:40:19.444Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:40:59.319Z"}
+{"method":"GET","status":304,"url":"/kingdoms/:id/castles","responseTime":"5 ms","level":"info","message":"","timestamp":"2017-09-11T12:41:13.703Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/castles","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:41:21.361Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:41:58.534Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/castles","responseTime":"4 ms","level":"info","message":"","timestamp":"2017-09-11T12:42:01.207Z"}
+{"method":"GET","status":200,"url":"/kingdoms/kk/castles","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:42:06.495Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:43:23.948Z"}
+{"method":"GET","status":200,"url":"/kingdoms/kk/castles","responseTime":"8 ms","level":"info","message":"","timestamp":"2017-09-11T12:43:29.210Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:43:42.754Z"}
+{"method":"GET","status":200,"url":"/kingdoms/kk/castles","responseTime":"9 ms","level":"info","message":"","timestamp":"2017-09-11T12:43:43.995Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/castles","responseTime":"3 ms","level":"info","message":"","timestamp":"2017-09-11T12:43:56.018Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:44:01.345Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:49:18.341Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:49:23.172Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:50:01.278Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:50:04.263Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:50:17.593Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:50:19.237Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:51:00.533Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T12:51:03.380Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T12:51:53.788Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T12:51:55.587Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T13:01:37.336Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T13:01:42.780Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-11T13:01:57.204Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-11T13:01:59.424Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T13:02:47.237Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T13:02:48.742Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/castles","responseTime":"4 ms","level":"info","message":"","timestamp":"2017-09-11T13:03:47.350Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T13:06:49.833Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"7 ms","level":"info","message":"","timestamp":"2017-09-11T13:06:53.757Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3333/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:02.916Z"}
+{"method":"GET","status":200,"url":"/kingdoms/err/size","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:09.060Z"}
+{"method":"GET","status":200,"url":"/kingdoms/4/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:14.146Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:21.135Z"}
+{"method":"GET","status":200,"url":"/kingdoms/5/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:24.111Z"}
+{"method":"GET","status":200,"url":"/kingdoms/4/size","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:27.758Z"}
+{"method":"GET","status":200,"url":"/kingdoms/6/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T13:07:30.655Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T13:19:18.700Z"}
+{"method":"GET","status":200,"url":"/kingdoms","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T13:19:23.367Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T14:39:16.326Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T14:39:26.497Z"}
+{"method":"GET","status":200,"url":"/kingdoms/fezf/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T14:39:34.798Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T14:39:59.586Z"}
+{"method":"GET","status":200,"url":"/kingdoms/fezf/size","responseTime":"3 ms","level":"info","message":"","timestamp":"2017-09-11T14:40:01.758Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T14:41:13.590Z"}
+{"method":"GET","status":200,"url":"/kingdoms/fezf/size","responseTime":"3 ms","level":"info","message":"","timestamp":"2017-09-11T14:41:14.893Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T14:48:00.604Z"}
+{"method":"GET","status":200,"url":"/kingdoms/fezf/size","responseTime":"13 ms","level":"info","message":"","timestamp":"2017-09-11T14:48:10.157Z"}
+{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T14:48:14.506Z"}
+{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T14:48:20.017Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T14:48:22.873Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T14:49:12.835Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/size","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-11T14:49:17.345Z"}
+{"method":"GET","status":200,"url":"/kingdoms/%C3%A9ddd/size","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-11T14:49:32.145Z"}
+{"method":"GET","status":200,"url":"/kingdoms/4/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-11T14:49:35.943Z"}
+{"method":"GET","status":200,"url":"/kingdoms/5/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T14:49:42.280Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-11T15:04:34.221Z"}
+{"method":"GET","status":200,"url":"/kingdoms/5/size","responseTime":"5 ms","level":"info","message":"","timestamp":"2017-09-11T15:04:38.662Z"}
+{"method":"GET","status":200,"url":"/kingdoms/ffff/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-11T15:04:46.046Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T06:31:13.441Z"}
+{"method":"GET","status":200,"url":"/kingdoms/ffff/size","responseTime":"12 ms","level":"info","message":"","timestamp":"2017-09-12T06:31:21.847Z"}
+{"method":"GET","status":200,"url":"/api/locations/ccc","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-12T06:31:32.289Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T06:32:17.496Z"}
+{"method":"GET","status":200,"url":"/locations/ccc","responseTime":"13 ms","level":"info","message":"","timestamp":"2017-09-12T06:32:18.782Z"}
+{"method":"GET","status":200,"url":"/locations/castle","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-12T06:32:26.095Z"}

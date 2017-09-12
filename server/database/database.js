@@ -54,7 +54,7 @@ module.exports = {
       FROM kingdoms
       WHERE gid = $1
       LIMIT(1);`;
-        const result = await client.query(sizeQuery, [ id ])
+        const result = await client.query(sizeQuery, [ id ]);
         return result.rows[0]
     },
     countCastles: async (regionId) => {
