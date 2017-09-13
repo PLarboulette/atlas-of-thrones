@@ -7,3 +7,6 @@
 {"id":"fff","message":"ID taken in parameter doesn't respect the conditions","conditions":"Number between 0 and 1000, required field","level":"error","timestamp":"2017-09-12T10:55:50.941Z"}
 {"id":"33333","message":"ID taken in parameter doesn't respect the conditions","conditions":"Number between 0 and 1000, required field","level":"error","timestamp":"2017-09-12T10:55:57.868Z"}
 {"type":"2","message":"type taken in parameter doesn't respect the conditions","conditions":"Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'","level":"error","timestamp":"2017-09-12T10:56:05.821Z"}
+{"type":"mmm","message":"type taken in parameter doesn't respect the conditions","conditions":"Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'","level":"error","timestamp":"2017-09-12T11:34:54.218Z"}
+{"type":"mmm","message":"type taken in parameter doesn't respect the conditions","conditions":"Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'","level":"error","timestamp":"2017-09-12T11:35:13.272Z"}
+{"type":"mmm","message":"type taken in parameter doesn't respect the conditions","conditions":"Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'","level":"error","timestamp":"2017-09-12T11:35:41.208Z"}

@@ -1,7 +1,7 @@
 const postgres = require('pg');
 
 const config = require('./../utils/config.json');
-const logger = require('./../utils/logger');
+const {logInfo, logError} = require('./../utils/logger');
 
 
 const client = new postgres.Client({
@@ -16,11 +16,11 @@ const client = new postgres.Client({
 client.connect()
     .then(() => {
         const logs = {"type" : "Connection to database", status : "OK", database : client.database, host : client.host, port : client.port};
-        logger.info(logs)
+        logInfo(logs)
     })
     .catch((err) => {
             console.log(err);
-            logger.error(err);
+            logError(err);
         }
     );
 
@@ -67,4 +67,18 @@ module.exports = {
         const result = await client.query(countQuery, [ regionId ]);
         return result.rows[0]
     },
+    getSummary: async (table, id) => {
+        if (table !== 'kingdoms' && table !== 'locations') {
+            throw new Error(`Invalid Table - ${table}`)
+        }
+
+        const summaryQuery = `
+      SELECT summary, url
+      FROM ${table}
+      WHERE gid = $1
+      LIMIT(1);`;
+        const result = await client.query(summaryQuery, [ id ]);
+        return result.rows[0]
+    }
+
 };

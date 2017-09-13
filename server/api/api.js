@@ -5,8 +5,9 @@
 const router = require('express').Router()
 ;const Joi = require('joi');
 
-const logger = require('./../utils/logger');
+const {logInfo, logError} = require('./../utils/logger');
 const database = require('./../database/database');
+const cache = require('./../database/redis');
 
 router.use( async (req, res, next) => {
     try {
@@ -14,16 +15,13 @@ router.use( async (req, res, next) => {
         await next();
         const responseTime = Date.now() - start;
         const logs = {method : req.method, status : res.statusCode, url : req.url, responseTime : `${responseTime} ms`,};
-        // console.log(`Method : ${req.method} - Status : ${res.statusCode} - Url : ${req.url} - Response Time : ${responseTime} ms`);
-        logger.info(logs);
-    } catch (err) {
-        logger.error(err);
-        console.log(err);
+        logInfo(logs);
+    } catch (error) {
+        logError(error);
     }
-
 });
 
-router.get('/', async (req, res) => {
+router.get('/', cache.route(), async (req, res) => {
     res.send('API - Hello friend ! ');
 });
 
@@ -33,7 +31,7 @@ router.get('/time', async (req, res) => {
 });
 
 // Input validation for id parameter
-router.param('id', function(req, res, next, id) {
+router.param('id', (req, res, next, id) => {
     const schema = Joi.object().keys({id: Joi.number().min(0).max(1000).required()});
     const {error} = Joi.validate({ id: id }, schema);
     if (!error) {
@@ -44,12 +42,12 @@ router.param('id', function(req, res, next, id) {
             message : `ID taken in parameter doesn't respect the conditions`,
             conditions : `Number between 0 and 1000, required field`
         };
-        logger.error(errorResponse);
-        res.send(errorResponse)
+        logError(errorResponse);
+        res.status(403).send(errorResponse)
     }
 });
 
-router.param('type', function(req, res, next, type) {
+router.param('type', (req, res, next, type) => {
     const schema = Joi.object().keys({type: Joi.string().valid(['castle', 'city', 'town', 'ruin', 'landmark', 'region']).required()});
     const {error} = Joi.validate({ type: type }, schema);
     if (!error) {
@@ -60,12 +58,12 @@ router.param('type', function(req, res, next, type) {
             message : `type taken in parameter doesn't respect the conditions`,
             conditions : `Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'`
         };
-        logger.error(errorResponse);
-        res.send(errorResponse)
+        logError(errorResponse);
+        res.status(403).send(errorResponse)
     }
 });
 
-router.get('/locations/:type', async (req, res) => {
+router.get('/locations/:type',  cache.route(), async (req, res) => {
 
     try {
         const type = req.params.type;
@@ -76,17 +74,15 @@ router.get('/locations/:type', async (req, res) => {
             return geojson
         });
         const logs = {method : req.method, status : res.statusCode, url : req.url, locationsLength : locations.length,};
-        logger.info(logs);
+        logInfo(logs);
         res.send(locations)
     } catch (error) {
-        logger.error(error);
-        res.send(error);
+        logError(error);
+        res.status(500).send(error);
     }
-
 });
 
-// Respond with boundary geojson for all kingdoms
-router.get('/kingdoms', async (req, res) => {
+router.get('/kingdoms',  cache.route(), async (req, res) => {
     try {
         const results = await database.getKingdomBoundaries();
         const boundaries = results.map((row) => {
@@ -95,48 +91,64 @@ router.get('/kingdoms', async (req, res) => {
             return geojson
         });
         const logs = {method : req.method, status : res.statusCode, url : req.url, boundariesArrayLength : boundaries.length,};
-        logger.info(logs);
+        logInfo(logs);
         res.send(boundaries)
     } catch (error) {
-        logger.error(error);
-        res.send(error);
+        logError(error);
+        res.status(500).send(error);
     }
 });
 
-
-router.get('/kingdoms/:id/size', async (req, res) => {
-
+router.get('/kingdoms/:id/size',  cache.route(), async (req, res) => {
     try {
         const id = req.params.id;
         const result = await database.getRegionSize(id);
         const sqKm = result.size * (10 ** -6);
         const json = {id : id, size : sqKm};
         const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, kingDomSize : result};
-        logger.info(logs);
+        logInfo(logs);
         res.send(json);
-
     } catch (error) {
-        logger.error(error);
-        res.send(error);
+        logError(error);
+        res.status(500).send(error);
     }
 });
 
-router.get('/kingdoms/:id/castles', async (req, res) => {
-
+router.get('/kingdoms/:id/castles',  cache.route(), async (req, res) => {
     try {
-        const schema = Joi.object().keys({id: Joi.number().min(0).max(1000).required()});
-        const id = req.params.id;
-        const {error, value} = Joi.validate({ id: id }, schema);
-        if (!error) {
-            const result = await database.countCastles(id);
-            const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, kingDomSize : result};
-            logger.info(logs);
-            res.send(result);
-        } else {
-            res.send(error);
-        }
+        const result = await database.countCastles(id);
+        const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, kingDomSize : result};
+        logInfo(logs);
+        res.send(result);
     } catch (error) {
-        res.send(error);
+        logError(error);
+        res.status(500).send(error);
+    }
+});
+
+router.get('/kingdoms/:id/summary', cache.route(), async (req, res) => {
+    try {
+        const id = req.params.id;
+        const result = await database.getSummary('kingdoms', id);
+        const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, summary : result};
+        logInfo(logs);
+        res.send(result);
+    } catch (error) {
+        logError(error);
+        res.status(500).send(error);
+    }
+});
+
+router.get('/locations/:id/summary', cache.route(), async (req, res) => {
+    try {
+        const id = req.params.id;
+        const result = await database.getSummary('locations', id);
+        const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, summary : result};
+        logInfo(logs);
+        res.send(result);
+    } catch (error) {
+        logError(error);
+        res.status(500).send(error)
     }
 });
 

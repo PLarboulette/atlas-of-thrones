@@ -1,11 +1,11 @@
 
+'use strict';
 
 const winston = require('winston');
 const path = require('path');
 const config = require('./config.json');
 
-// Configure custom app-wide logger
-module.exports = new winston.Logger({
+const logger = new winston.Logger({
     transports: [
         new (winston.transports.Console)(),
         new (winston.transports.File)({
@@ -20,4 +20,16 @@ module.exports = new winston.Logger({
         })
     ]
 });
+
+module.exports.logInfo = (logs) =>  {
+    logger.info(logs);
+};
+
+module.exports.logWarn = (logs) => {
+    logger.warn(logs)
+};
+
+module.exports.logError = (logs) =>  {
+    logger.error(logs);
+};
 

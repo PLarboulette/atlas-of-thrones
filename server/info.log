@@ -1,45 +1,26 @@
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T07:10:25.041Z"}
-{"method":"GET","status":200,"url":"/locations/castle","responseTime":"4 ms","level":"info","message":"","timestamp":"2017-09-12T07:10:27.462Z"}
-{"method":"GET","status":200,"url":"/locations/castle","locationsLength":118,"level":"info","message":"","timestamp":"2017-09-12T07:10:27.535Z"}
-    {"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T07:17:15.243Z"}
-{"method":"GET","status":200,"url":"/kingdoms","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T07:17:18.146Z"}
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T07:17:42.961Z"}
-{"method":"GET","status":200,"url":"/kingdoms","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T07:17:45.154Z"}
-{"method":"GET","status":200,"url":"/kingdoms","boundaries":10,"level":"info","message":"","timestamp":"2017-09-12T07:17:45.219Z"}
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T07:18:27.692Z"}
-{"method":"GET","status":200,"url":"/kingdoms","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T07:18:29.875Z"}
-{"method":"GET","status":200,"url":"/kingdoms","boundariesArrayLength":10,"level":"info","message":"","timestamp":"2017-09-12T07:18:29.932Z"}
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T07:20:11.764Z"}
-{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"5 ms","level":"info","message":"","timestamp":"2017-09-12T07:20:18.860Z"}
-{"method":"GET","status":200,"url":"/kingdoms/1/size","id":"1","kingDomSize":{"size":749167526478.532},"level":"info","message":"","timestamp":"2017-09-12T07:20:18.930Z"}
-{"id":"ggggg","message":"ID taken in parameter doesn't respect the conditions","conditions":"Number between 0 and 1000, required field","level":"error","timestamp":"2017-09-12T07:20:52.802Z"}
-{"method":"GET","status":200,"url":"/kingdoms/ggggg/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T07:20:52.802Z"}
-{"method":"GET","status":200,"url":"/kingdoms/33/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T07:21:11.153Z"}
-{"message":"Cannot read property 'size' of undefined","stack":"TypeError: Cannot read property 'size' of undefined\n    at router.get (C:\\Users\\Pierre Larboulette\\Documents\\Projets\\atlas-of-thrones\\atlas-of-thrones\\server\\api\\api.js:111:28)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)","level":"error","timestamp":"2017-09-12T07:21:11.155Z"}
-{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T07:21:16.495Z"}
-{"method":"GET","status":200,"url":"/kingdoms/2/size","id":"2","kingDomSize":{"size":28179853614.1399},"level":"info","message":"","timestamp":"2017-09-12T07:21:16.495Z"}
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T10:55:25.507Z"}
-{"method":"GET","status":200,"url":"/","responseTime":"5 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:31.838Z"}
-{"method":"GET","status":200,"url":"/kingdoms","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:37.890Z"}
-{"method":"GET","status":200,"url":"/kingdoms","boundariesArrayLength":10,"level":"info","message":"","timestamp":"2017-09-12T10:55:38.198Z"}
-{"method":"GET","status":200,"url":"/kingdoms/1/size","responseTime":"5 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:42.244Z"}
-{"method":"GET","status":200,"url":"/kingdoms/1/size","id":"1","kingDomSize":{"size":749167526478.532},"level":"info","message":"","timestamp":"2017-09-12T10:55:42.288Z"}
-{"method":"GET","status":200,"url":"/api/kingdoms/1/ff","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:45.963Z"}
-{"id":"fff","message":"ID taken in parameter doesn't respect the conditions","conditions":"Number between 0 and 1000, required field","level":"error","timestamp":"2017-09-12T10:55:50.941Z"}
-{"method":"GET","status":200,"url":"/kingdoms/fff/size","responseTime":"3 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:50.942Z"}
-{"id":"33333","message":"ID taken in parameter doesn't respect the conditions","conditions":"Number between 0 and 1000, required field","level":"error","timestamp":"2017-09-12T10:55:57.868Z"}
-{"method":"GET","status":200,"url":"/kingdoms/33333/size","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:57.869Z"}
-{"method":"GET","status":200,"url":"/kingdoms/2/size","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T10:55:59.739Z"}
-{"method":"GET","status":200,"url":"/kingdoms/2/size","id":"2","kingDomSize":{"size":28179853614.1399},"level":"info","message":"","timestamp":"2017-09-12T10:55:59.741Z"}
-{"method":"GET","status":200,"url":"/api/locations/2/size","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T10:56:03.419Z"}
-{"type":"2","message":"type taken in parameter doesn't respect the conditions","conditions":"Authorised values : 'castle', 'city', 'town', 'ruin', 'landmark', 'region'","level":"error","timestamp":"2017-09-12T10:56:05.821Z"}
-{"method":"GET","status":200,"url":"/locations/2","responseTime":"2 ms","level":"info","message":"","timestamp":"2017-09-12T10:56:05.822Z"}
-{"method":"GET","status":200,"url":"/locations/city","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T10:56:10.282Z"}
-{"method":"GET","status":200,"url":"/locations/city","locationsLength":21,"level":"info","message":"","timestamp":"2017-09-12T10:56:10.285Z"}
-{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T10:56:57.479Z"}
-{"method":"GET","status":200,"url":"/locations/city","responseTime":"4 ms","level":"info","message":"","timestamp":"2017-09-12T10:56:59.543Z"}
-{"method":"GET","status":200,"url":"/locations/city","locationsLength":21,"level":"info","message":"","timestamp":"2017-09-12T10:56:59.604Z"}
-{"method":"GET","status":200,"url":"/locations/town","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T10:57:20.783Z"}
-{"method":"GET","status":200,"url":"/locations/town","locationsLength":32,"level":"info","message":"","timestamp":"2017-09-12T10:57:20.786Z"}
-{"method":"GET","status":200,"url":"/locations/castle","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T10:57:35.826Z"}
-{"method":"GET","status":200,"url":"/locations/castle","locationsLength":118,"level":"info","message":"","timestamp":"2017-09-12T10:57:35.830Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T13:41:55.426Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/summary","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-12T13:44:56.185Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T14:16:23.296Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/summary","responseTime":"7 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:26.887Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/summary","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:27.752Z"}
+{"method":"GET","status":200,"url":"/kingdoms/3/summary","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:28.344Z"}
+{"method":"GET","status":200,"url":"/kingdoms/7/summary","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:35.406Z"}
+{"method":"GET","status":200,"url":"/kingdoms/7/summary","id":"7","summary":{"summary":"The stormlands are one of the constituent regions of the Seven Kingdoms on the continent of Westeros. The Kingdom of the Storm was a sovereign nation until the War of Conquest, in which the last Storm King was slain. The region is so-named for the savage and frequent autumn storms that batter the coast after beginning in the Summer Sea. The stormlands are ruled from the castle of Storms End by House Baratheon. Notable bannermen of the region include Buckler, Caron, Connington, Dondarrion, Errol, Estermont, Penrose, Selmy, Staedmon, Swann, Tarth, and Wylde. Noble bastards raised in the stormlands are given the surname Storm.","url":"https://awoiaf.westeros.org/index.php/Stormlands"},"level":"info","message":"","timestamp":"2017-09-12T14:16:35.416Z"}
+{"method":"GET","status":200,"url":"/kingdoms/8/summary","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:45.423Z"}
+{"method":"GET","status":200,"url":"/kingdoms/8/summary","id":"8","summary":{"summary":"For the smaller valley from which the region takes its name, see Vale of Arryn (valley). The Vale of Arryn or  the Vale  is one of the constituent regions of the Seven Kingdoms of Westeros. It was formerly a sovereign nation ruled by the Kings of Mountain and Vale before Aegons Conquest. The Mountains of the Moon surround the smaller Vale proper, although the valleys name is often applied to all of House Arryns realm. The Vale is ruled by the Arryns from the castle known as the Eyrie. Notable houses of this region include Baelish, Belmore, Corbray, Egen, Grafton, Hersy, Hunter, Melcolm, Redfort, Royce, Templeton, and Waynwood. Bastards of noble origin raised in the Vale are given the surname Stone.","url":"https://awoiaf.westeros.org/index.php/Vale%20of%20Arryn"},"level":"info","message":"","timestamp":"2017-09-12T14:16:45.428Z"}
+{"method":"GET","status":200,"url":"/kingdoms/9/summary","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T14:16:59.708Z"}
+{"method":"GET","status":200,"url":"/kingdoms/9/summary","id":"9","summary":{"summary":"The westerlands is a region in the west of the continent of Westeros. Before the Targaryen conquest, it was known as the Kingdom of the Rock. People from the westerlands are known as westermen. The customary surname of bastards of noble origin born in the westerlands is Hill.\nThe westerlands is ruled from Casterly Rock by House Lannister. Notable bannermen have included Banefort, Brax, Broom, Clegane, Crakehall, Farman, Lefford, Lydden, Marbrand, Payne, Prester, Reyne, Serrett, Swyft, Tarbeck, and Westerling.","url":"https://awoiaf.westeros.org/index.php/Westerlands"},"level":"info","message":"","timestamp":"2017-09-12T14:16:59.710Z"}
+{"method":"GET","status":200,"url":"/locations/9/summary","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T14:17:15.374Z"}
+{"method":"GET","status":200,"url":"/locations/9/summary","id":"9","summary":{"summary":"Stokeworth, also known as Castle Stokeworth,  is the seat of House Stokeworth in the Crownlands. The maester at Stokeworth is Frenken.\nIt lies north of Kings Landing, between Rosby and Duskendale.","url":"https://awoiaf.westeros.org/index.php/Stokeworth"},"level":"info","message":"","timestamp":"2017-09-12T14:17:15.380Z"}
+{"method":"GET","status":200,"url":"/locations/3/summary","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T14:17:31.706Z"}
+{"method":"GET","status":200,"url":"/locations/3/summary","id":"3","summary":{"summary":"Rosby is the seat of House Rosby, north of Blackwater Bay in the Crownlands. Rosby sits just northeast of Kings Landing along the Rosby road, the shortest road between the capital and Duskendale. Lying around the small castle is a village made of daub-and-wattle huts. Rosbys maester is Melwys.","url":"https://awoiaf.westeros.org/index.php/Rosby"},"level":"info","message":"","timestamp":"2017-09-12T14:17:31.707Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T14:17:42.126Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T14:18:07.619Z"}
+{"method":"GET","status":200,"url":"/locations/3/summary","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-12T14:18:11.752Z"}
+{"method":"GET","status":200,"url":"/locations/5/summary","responseTime":"1 ms","level":"info","message":"","timestamp":"2017-09-12T14:18:23.296Z"}
+{"method":"GET","status":200,"url":"/locations/5/summary","id":"5","summary":{"summary":"Tumbleton is a town in the Reach and is the seat of House Footly. It is located fifty leagues southwest of Kings Landing, near the Reachs northeastern border with the Crownlands. It is near the source of the Mander.\nA stout but small castle with a garrison of forty men overlooks the town.","url":"https://awoiaf.westeros.org/index.php/Tumbleton"},"level":"info","message":"","timestamp":"2017-09-12T14:18:23.305Z"}
+{"method":"GET","status":200,"url":"/locations/5/summary","responseTime":"0 ms","level":"info","message":"","timestamp":"2017-09-12T14:18:31.246Z"}
+{"level":"info","message":"OK connected to redis://localhost:6379","timestamp":"2017-09-12T14:19:41.261Z"}
+{"type":"Connection to database","status":"OK","database":"atlas_of_thrones","host":"localhost","port":5432,"level":"info","message":"","timestamp":"2017-09-12T14:19:41.284Z"}
+{"method":"GET","status":200,"url":"/locations/5/summary","responseTime":"6 ms","level":"info","message":"","timestamp":"2017-09-12T14:19:45.224Z"}
+{"level":"info","message":"GET erc:/api/locations/5/summary ~0.91 Kb","timestamp":"2017-09-12T14:19:45.226Z"}
