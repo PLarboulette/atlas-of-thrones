@@ -6,7 +6,7 @@ const router = require('express').Router()
 ;const Joi = require('joi');
 
 const {logInfo, logError} = require('./../utils/logger');
-const database = require('./../database/database');
+const { queryTime, countCastles, getKingdomBoundaries, getLocations, getRegionSize, getSummary} = require('./../database/database');
 const cache = require('./../database/redis');
 
 router.use( async (req, res, next) => {
@@ -26,7 +26,7 @@ router.get('/', cache.route(), async (req, res) => {
 });
 
 router.get('/time', async (req, res) => {
-    const result = await database.queryTime();
+    const result = await queryTime();
     res.send(result);
 });
 
@@ -67,7 +67,7 @@ router.get('/locations/:type',  cache.route(), async (req, res) => {
 
     try {
         const type = req.params.type;
-        const results = await database.getLocations(type);
+        const results = await getLocations(type);
         const locations = results.map((row) => {
             let geojson = JSON.parse(row.st_asgeojson);
             geojson.properties = { name: row.name, type: row.type, id: row.gid };
@@ -84,7 +84,7 @@ router.get('/locations/:type',  cache.route(), async (req, res) => {
 
 router.get('/kingdoms',  cache.route(), async (req, res) => {
     try {
-        const results = await database.getKingdomBoundaries();
+        const results = await getKingdomBoundaries();
         const boundaries = results.map((row) => {
             let geojson = JSON.parse(row.st_asgeojson);
             geojson.properties = { name: row.name, id: row.gid };
@@ -102,7 +102,7 @@ router.get('/kingdoms',  cache.route(), async (req, res) => {
 router.get('/kingdoms/:id/size',  cache.route(), async (req, res) => {
     try {
         const id = req.params.id;
-        const result = await database.getRegionSize(id);
+        const result = await getRegionSize(id);
         const sqKm = result.size * (10 ** -6);
         const json = {id : id, size : sqKm};
         const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, kingDomSize : result};
@@ -116,7 +116,7 @@ router.get('/kingdoms/:id/size',  cache.route(), async (req, res) => {
 
 router.get('/kingdoms/:id/castles',  cache.route(), async (req, res) => {
     try {
-        const result = await database.countCastles(id);
+        const result = await countCastles(id);
         const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, kingDomSize : result};
         logInfo(logs);
         res.send(result);
@@ -129,7 +129,7 @@ router.get('/kingdoms/:id/castles',  cache.route(), async (req, res) => {
 router.get('/kingdoms/:id/summary', cache.route(), async (req, res) => {
     try {
         const id = req.params.id;
-        const result = await database.getSummary('kingdoms', id);
+        const result = await getSummary('kingdoms', id);
         const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, summary : result};
         logInfo(logs);
         res.send(result);
@@ -142,7 +142,7 @@ router.get('/kingdoms/:id/summary', cache.route(), async (req, res) => {
 router.get('/locations/:id/summary', cache.route(), async (req, res) => {
     try {
         const id = req.params.id;
-        const result = await database.getSummary('locations', id);
+        const result = await getSummary('locations', id);
         const logs = {method : req.method, status : res.statusCode, url : req.url, id : id, summary : result};
         logInfo(logs);
         res.send(result);
