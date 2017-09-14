@@ -30,7 +30,7 @@ const htmlLoader = {
 const webpackConfig = {
     entry: './app/main.js', // Start at app/main.js
     output: {
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname),
         filename: 'bundle.js' // Output to public/bundle.js
     },
     module: { loaders: [ babelLoader, scssLoader, urlLoader, htmlLoader ] }
